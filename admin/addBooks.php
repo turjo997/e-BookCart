@@ -1,7 +1,7 @@
 <?php
    require_once 'header.php';
    require_once 'checklogin.php';
-   require_once '../config.php';
+   require_once '../index.php';
 
    $bookname_error = $author_error = $price_error = $category_error = $uploadbook_error = "";
    $book_name = $author = $price = $category = $upload_book = $status = "" ;
