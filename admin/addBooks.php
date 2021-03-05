@@ -80,21 +80,26 @@
 
     }
     
-    if(empty($bookname_erro) && empty($author_error) && empty($price_error) && empty($category_error) && empty($uploadbook_error)){
-           
-      $sql = "INSERT into books values('','$book_name', '$upload_book' , '$author' , '' ,'$price','$category')";
+    if(empty($bookname_error) && empty($author_error) && empty($price_error) && empty($uploadbook_error) && empty($category_error)){
+     // echo 'success';
+      $sql = "INSERT INTO  books (book_name , img,author ,isbn ,price,category)   values('$book_name', '$upload_book' , '$author' ,' ','$price','$category')";
+       //('book_id','book_name' , 'img' ,'author' ,'isbn' ,'price','category') 
+   
+      
+       if (!$link) {
+        die("Connection failed: " . mysqli_connect_error());
+        }
 
-      if(mysqli_query($link , $sql)){
-         $status = '<div class="alert alert-success ">Successfully Added Books</div>';
-        
-      }
-      else{
-
-        $status = '<div class="alert alert-danger ">Failed to Added Books</div>';
-      }
-
+        if (mysqli_query($link, $sql)) {
+        //  echo "New record created successfully";
+          $status = '<div class="alert alert-success ">Successfully Added Books</div>';
+        } else {
+         // echo "Error: " . $sql . "<br>" . mysqli_error($link);
+          $status = '<div class="alert alert-danger ">Failed to Added Books</div>' ; //. $sql . "<br>" . mysqli_error($link);
+       }
+       mysqli_close($link);
+  
     }
-
 
   }
 
