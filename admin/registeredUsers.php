@@ -9,7 +9,7 @@
    if(isset($_POST['se'])){
 
     $username = check_input($_POST['username']);
-    $sql = "SELECT * FROM login where user_name = '$username'";
+    $sql = "SELECT * FROM registration where user_name = '$username'";
 
 
         $result = mysqli_query($link , $sql);
@@ -47,7 +47,7 @@
 
    if(isset($_POST['vl'])){
 
-    $sql = "SELECT * FROM login";
+    $sql = "SELECT * FROM registration";
     $result = mysqli_query($link , $sql);
     $users = mysqli_num_rows($result);
       
