@@ -2,7 +2,7 @@
    require_once '../config.php';
    require_once 'header.php';
    require_once 'checklogin.php';
-   require_once 'functions.php';
+   //require_once 'functions.php';
 
    $resu = "" ;
    $books = "";
