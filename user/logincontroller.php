@@ -55,7 +55,11 @@
           // session_start();
             
         }
-        
+        else{
+             
+          $error = "Invalid login credentials";
+
+        }
 
       }
 
