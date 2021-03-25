@@ -4,6 +4,7 @@
      <head>
 	 
 	        <title>main</title>
+	        <link rel = "shortcut icon" type="image" href="coverimages/bookLogo.png"/>	
 			
  
      <!--font awsome-->
