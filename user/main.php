@@ -3,12 +3,9 @@
  require_once 'header.php';
  require_once '../config.php';
  $status = "";
- //session_start();
- /*                    
- if(!isset($_SESSION['aloggedin'])){
-*/
-if(isset($_POST['add2'])){     
-    $status = '<div class="alert alert-danger ">Please login</div>' ;
+if(isset($_POST['add'])){     
+   // $status = '<div class="alert alert-danger ">Please login</div>' ;
+    echo '<script>alert("Please login first")</script>'; 
  }
 
 ?>
