@@ -9,6 +9,7 @@
      <head>
 	 
 	        <title>User</title>
+	        <link rel = "shortcut icon" type="image" href="images/bookLogo.png"/>	
 			
 			<link rel = "stylesheet" href="userStyle.css"/>	
 
