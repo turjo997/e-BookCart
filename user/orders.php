@@ -50,6 +50,34 @@ require_once '../config.php';
                             <td><?php echo $value["item_name"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td>$ <?php echo $value["product_price"]; ?></td>
+                                
+                                 <?php
+                            $book_name = $value["item_name"];
+                            $book_quantiy = $value["item_quantity"];
+                            $user_name = $_SESSION['user_name'];
+
+                            if(isset($_POST['submit'])){
+                                $sql = "INSERT INTO orders(book_name , book_quantity , user_name)   values('$book_name', '$book_quantiy' , '$user_name')";
+                              //  $result = mysqli_query($link , $sql);
+
+                                    if (!$link) {
+                                        die("Connection failed: " . mysqli_connect_error());
+                                    }
+                    
+                                    if (mysqli_query($link, $sql)) {
+                                                
+                                    echo '<script>alert("Successfully ordered the products")</script>';             
+                                    } else {
+                                        echo '<script>alert("Failed to ordered the products")</script>';                
+                                    }
+                                  //  mysqli_close($link);
+                                            
+
+                            }  
+
+
+
+                            ?> 
                             <td>
                           
                          <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
