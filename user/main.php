@@ -134,7 +134,7 @@ if(isset($_POST['add'])){
                     ?>
                     <div class="col-md-3">
 
-                        <form method="post" action=" action=add&id=<?php echo $row["book_id"]; ?>">
+                        <form method="post" action=" action="">
 
                             <div class="product">
                                 <img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width: 100px; height:100px">
@@ -185,7 +185,7 @@ if(isset($_POST['add'])){
                     ?>
                     <div class="col-md-3">
 
-                        <form method="post" action=" action=add&id=<?php echo $row["book_id"]; ?>">
+                        <form method="post" action=" action="">
 
                             <div class="product">
                                 <img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width: 100px; height:100px">
