@@ -40,9 +40,11 @@
 
                // echo $row['user_password'];
              if(password_verify($password , $row['user_password'])){
-                //session_start(); 
+               
+                  session_start(); 
                 $_SESSION['loggedin'] = true;
-                $_SESSION['user_id1'] = $row['user_id'];
+               // $_SESSION['user_name'] = $row['user_id'];
+                $_SESSION['user_name'] = $username;
                 header('location: userprofile.php');
              }
              else{
