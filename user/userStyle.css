@@ -32,3 +32,48 @@
    color:  orangered;
    transform: scale(1.1);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
+.product{
+    margin : 5px;
+    display : inline-table;
+    width: 170px;
+    height: 275px;
+    background-color: #F5FBEF;
+    text-align:center;
+    vertical-align: top; 
+
+}
+table, th, tr{
+    text-align: center;
+}
+.title2{
+    text-align: center;
+    color: #66afe9;
+    background-color: #efefef;
+    padding: 2%;
+}
+h2{
+    text-align: center;
+    color: #66afe9;
+    background-color: #efefef;
+    padding: 2%;
+}
+table th{
+    background-color: #efefef;
+}
+
+.tag{
+width: 100%;
+display: inline-table;
+height: 25%;
+background-color: #df5887;
+text-align: center;
+font-weight: bold;
+color: white;
+
+}
