@@ -18,8 +18,53 @@
  
 
 				<style>
-	
-	            </style>
+             @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+              *{
+                  font-family: 'Titillium Web', sans-serif;
+              }
+              .product{
+                  margin : 5px;
+                  display : inline-table;
+                  width: 170px;
+                  height: 275px;
+                  background-color: #F5FBEF;
+                  text-align:center;
+                  vertical-align: top; 
+          
+            }
+              table, th, tr{
+                  text-align: center;
+              }
+              .title2{
+                  text-align: center;
+                  color: #66afe9;
+                  background-color: #efefef;
+                  padding: 2%;
+              }
+              h2{
+                  text-align: center;
+                  color: #66afe9;
+                  background-color: #efefef;
+                  padding: 2%;
+              }
+              table th{
+                  background-color: #efefef;
+              }
+
+           .tag{
+            width: 100%;
+            display: inline-table;
+            height: 25%;
+            background-color: #df5887;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+
+           }
+
+	    
+	      </style>
 			      <meta charset = "UTF-8">
             <meta name="viewport" content="width = device-width , initial-scale = 1.0">
             <meta http-equiv="X-UA-compatible" >
@@ -52,7 +97,7 @@
                      <span><i class="fas fa-bars navbar-icon"></i></span>
                    </button>
 
-                   <a class="navbar-brand" href="">
+                   <a class="navbar-brand" href="main.php">
                          <img src="images/bookLogo.png" alt="logo">
                   
                    </a>
@@ -64,63 +109,32 @@
                   
 
                    <?php
-                  //   session_start();
-                 // if(isset($_SESSION['loggedin'])){
-                  //  echo '<a class="nav-link" href="cart.php"><b>Bag<i class="fas fa-shopping-cart"></i></a><span id= "cart"class="badge badge-warning"></span>';
-                 //  }else{
+
+                    $signup = false;
+                    $login = false ;
+
+
                       echo'
+
+                      
                       <li class="nav-item active">
                       <a class="nav-link text-center text-md-left" href="signup.php">Signup</a>
                       </li>
                       <li class="nav-item active">
                       <a class="nav-link text-center text-md-left" href="login.php">Login</a>
                       </li>';
+
+
+
                             
-                  // }
-                   
-
-
-                   /*
-                     echo'
-        
-                     <li class="nav-item active">
-                     <a class="nav-link text-center text-md-left" href="signup.php">Signup</a>
-                     </li>' ;
-                     
-                      // if(!isset($_SESSION['aloggedin'])){
-
-                          echo'
-                          <li class="nav-item active">
-                          <a class="nav-link text-center text-md-left" href="login.php">Login</a>
-                         </li>' ;
-                           
-                     //  }else{
-                      /*
-                        echo'
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My Account
-                        </a>
-                  
-                       </li> ';
-                        
-                       }
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                        <h3>Hello,Admin</h3>
-                         <div class="divider"></div>
-                        <a class="font-weight-bolder dropdown-item" href="logout.php">logout</a>
-                        </div>*/
-
-        
-                     ?>
+                  ?>
                          
                      </ul>
                    </div>
                  </nav>
                 
-    </div>       
-
+    </div>    
+ 
 
 
 
