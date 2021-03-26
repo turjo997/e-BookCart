@@ -80,7 +80,7 @@ require_once '../config.php';
                             ?> 
                             <td>
                           
-                         <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
+                         <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?> TK</td>
                            
 
                     </tr>
@@ -98,7 +98,7 @@ require_once '../config.php';
                         ?>
                         <tr>
                             <td colspan="3" align="right">Total</td>
-                            <th align="right">$ <?php echo number_format($total, 2); ?></th>
+                            <th align="right"><?php echo number_format($total, 2); ?> TK</th>
                             <td></td>
                         </tr>
 
