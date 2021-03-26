@@ -57,8 +57,28 @@
            
       </div>
 
+      <div class="col-lg-4 d-block d-lg-flex">
+                     
+                     <div class="card  width: 18rem text-center">
+                                                                                              
+                         <img style="width: 310px" class = 'card-img-top' src="images/stats.jpg" alt="card-image" height="200" >
+                                                                 
+                              <div class="card-body">
+                                  <a style = "width:100%" class= "btn btn-success  card-link stretched-link" target="_blank" href="stats.php">Statistics of selling Books</a>
+                             </div>
+                                                                                                                                                  
+                       </div>
+                          
+      </div>
+
+     
+
    </div>
+
+      
    </section>
+
+   
 
                                              
                              
