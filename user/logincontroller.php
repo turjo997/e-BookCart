@@ -49,7 +49,8 @@
              }
              else{
 
-                $error = "Invalid login credentials";
+               
+               $error = '<div class="alert alert-danger ">Invalid login credentials</div>' ;
             }
 
             }
@@ -59,7 +60,8 @@
         }
         else{
              
-          $error = "Invalid login credentials";
+          
+          $error = '<div class="alert alert-danger ">Invalid login credentials</div>' ;
 
         }
 
