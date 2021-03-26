@@ -15,7 +15,16 @@
       $bookname_pattern = '/^[a-zA-Z ]+$/';
         if(!preg_match($bookname_pattern ,  $book_name )){
           $bookname_error  = "Please Enter Valid Book Name" ; 
+        }else{
+          $bookquery = "select * from books where book_name = '$book_name'";
+          $query = mysqli_query($link , $bookquery);
+        
+          $bookcount = mysqli_num_rows($query);
+          if($bookcount > 0 ){
+            $bookname_error = "This book is already exist";
+          }
         }
+                
     }
     if(empty($_POST['author'])){
       $author_error  = "Please Enter The Author" ; 
@@ -103,6 +112,7 @@
 
   }
 
+
   function check_input($data){
     $data =  trim($data);
     $data =  stripcslashes($data);
@@ -120,73 +130,86 @@
 
 <div class="container-fluid">
 	 
-     <div class="form-section bg-primary text-white p-3 my-3">
+     <div class="form-section text-black p-3 my-3">
 
                <div class="title text-center mb-3">
-                  <h3 class="font-weight-bolder">Provide all the details to add the book</h3>
+                  <h3 style="color:#0f6ba4"class="text-center font-weight-bolder">Provide all the details to add the book</h3>
                   <span><?php echo $status;?></span>
                 </div>
                 <br><br>
 
+
+                <div class="row">
+
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-8">
+                <form method = "post" action="" class="w-50 m-auto " enctype="multipart/form-data">
+
+                  <div class="from-group">
+
+                    <label for="book_name"><b>Book Name</label>
+                    <input type="text" class="form-control" name="book_name">
+                    <span class="text-danger"> <?php echo $bookname_error;?></span>
+
                     
-                        <form method = "post" action="" class="w-50 m-auto " enctype="multipart/form-data">
+                  </div>
 
-                          <div class="from-group">
+                  <div class="from-group">
 
-                            <label for="book_name">Book Name</label>
-                            <input type="text" class="form-control" name="book_name">
-                            <span class="text-danger"> <?php echo $bookname_error;?></span>
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" name="author">
+                    <span class="text-danger"> <?php echo $author_error;?></span>
 
-                            
-                          </div>
+                    
+                  </div>
+                  <div class="from-group">
 
-                          <div class="from-group">
-
-                            <label for="author">Author</label>
-                            <input type="text" class="form-control" name="author">
-                            <span class="text-danger"> <?php echo $author_error;?></span>
-
-                            
-                          </div>
-                          <div class="from-group">
-
-                          <label for="price">Price</label>
-                          <input type="text" class="form-control" name="price">
-                          <span class="text-danger"> <?php echo $price_error;?></span>
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price">
+                    <span class="text-danger"> <?php echo $price_error;?></span>
 
 
-                          </div>
+                    </div>
 
- 
-                        <div class="from-group">
 
-                        <label for="category">Category</label>
-                        <input type="text" class="form-control" name="category">
-                        <span class="text-danger"> <?php echo $category_error;?></span>
+                    <div class="from-group">
+
+                    <label for="category">Category</label>
+                    <input type="text" class="form-control" name="category">
+                    <span class="text-danger"> <?php echo $category_error;?></span>
+
+
+                    </div>
+
+                    <div class="from-group">
+
+                    <label for="upload_book">Upload Book</label>
+                    <input type="file" class="form-control" name="upload_book">
+                    <span class="text-danger"> <?php echo $uploadbook_error;?></span>
+                    </div>
+
+
+                        <div class="form-group mt-3">
+
+                        <input type="submit" name= "submit" class= "btn btn-secondary" value="Add Book">
+                        <input type="reset" class= "btn btn-secondary ml-3"  value="reset">
 
 
                         </div>
 
-                        <div class="from-group">
 
-                        <label for="upload_book">Upload Book</label>
-                        <input type="file" class="form-control" name="upload_book">
-                        <span class="text-danger"> <?php echo $uploadbook_error;?></span>
-                        </div>
-
-
-                          <div class="form-group mt-3">
-
-                          <input type="submit" name= "submit" class= "btn btn-secondary" value="Add Book">
-                          <input type="reset"  class= "btn btn-secondary ml-3"  value="reset">
-
-                        
-                          </div>
-
-						
                         </form>
 
-						
+
+
+
+                </div>
+
+                </div>
+
+                    
+                      
                         
                         
 </div>
