@@ -3,10 +3,20 @@
  require_once 'header.php';
  require_once '../config.php';
  $status = "";
+ //session_start();
+ /*                    
+ if(!isset($_SESSION['aloggedin'])){
+*/
 if(isset($_POST['add'])){     
    // $status = '<div class="alert alert-danger ">Please login</div>' ;
-    echo '<script>alert("Please login first")</script>'; 
+    echo '<script>alert("Please login")</script>'; 
  }
+ /*
+ if (isset($_POST["add"])){
+    if (isset($_SESSION["cart"])){
+        echo '<script>alert("Product login")</script>';    
+    }
+}*/
 
 ?>
 
@@ -80,7 +90,7 @@ if(isset($_POST['add'])){
                                 <h5 class="text-success"><?php echo 'Book Price : ' . $row["price"]; ?></h5>
                                 <!--<input type="text" name="quantity" class="form-control" value="1">-->
                                 
-                               <input type="submit" name="add1" style="margin-top: 5px;" class="btn btn-success"
+                               <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
                                        value="Add to Cart">
                        
                    
@@ -125,6 +135,8 @@ if(isset($_POST['add'])){
                  <div class="tag">Actions</div>
                  <div class="row">
         <?php
+
+            //action=add&id=<?php echo $row["book_id"]; 
             $query = "select * from books where category = 'Action' order by book_id ASC"; 
             $result = mysqli_query($link,$query);
             if(mysqli_num_rows($result) > 0) {
@@ -134,7 +146,7 @@ if(isset($_POST['add'])){
                     ?>
                     <div class="col-md-3">
 
-                        <form method="post" action=" action="">
+                        <form method="post" action="">
 
                             <div class="product">
                                 <img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width: 100px; height:100px">
@@ -185,7 +197,7 @@ if(isset($_POST['add'])){
                     ?>
                     <div class="col-md-3">
 
-                        <form method="post" action=" action="">
+                        <form method="post" action="">
 
                             <div class="product">
                                 <img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width: 100px; height:100px">
