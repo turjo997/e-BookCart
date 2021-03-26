@@ -58,7 +58,7 @@
                      <span><i class="fas fa-bars navbar-icon"></i></span>
                    </button>
 
-                   <a class="navbar-brand" href="">
+                   <a class="navbar-brand" href="userprofile.php">
                          <img src="images/bookLogo.png" alt="logo">
                   
                    </a>
@@ -71,31 +71,9 @@
 
                    <?php
 
-               /* echo'
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My Account
-                        </a>
-                  
-                       </li> ';
-                        
-                       }
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                        <h3>Hello,Admin</h3>
-                         <div class="divider"></div>
-                        <a class="font-weight-bolder dropdown-item" href="logout.php">logout</a>
-                        </div>*/
-
-
-
-
-
-
-
-
+            
                   //  if(!isset($_SESSION['loggedin'])){
-                      echo '<a class="nav-link" href="cart.php"><b>Bag<i class="fas fa-shopping-cart"></i><span class="badge badge-warning" style="border-radius:50%; height:30px;">0</span></a></b>
+                      echo '<a class="nav-link" href="orders.php"><b>Bag<i class="fas fa-shopping-cart"></i><span class="badge badge-warning" style="border-radius:50%; height:30px;">0</span></a></b>
                       
                       
                       <li class="nav-item dropdown">
@@ -113,27 +91,10 @@
                       
                       
                       ';
-                    /* }else{
-                        echo'
-                        <li class="nav-item active">
-                        <a class="nav-link text-center text-md-left" href="signup.php">Signup</a>
-                        </li>
-                        <li class="nav-item active">
-                        <a class="nav-link text-center text-md-left" href="login.php">Login</a>
-                        </li>';
-                              
-                     }*/
+                   
                      ?>
 
-
-               
-                    
-                      
-                       
-
-        
-                     
-                         
+ 
                      </ul>
                    </div>
                  </nav>
