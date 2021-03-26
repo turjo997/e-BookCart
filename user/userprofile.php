@@ -259,9 +259,9 @@ if (isset($_GET["action"])){
                         <tr>
                             <td><?php echo $value["item_name"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
-                            <td>$ <?php echo $value["product_price"]; ?></td>
+                            <td><?php echo $value["product_price"]; ?></td>
                             <td>
-                                $ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?> TK</td>
+                                <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?> TK</td>
                             <td><a href="userprofile.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span
                                         class="text-danger">Remove Item</span></a></td>
 
@@ -360,7 +360,7 @@ if (isset($_GET["action"])){
                         <tr>
                             <td><?php echo $value["item_name"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
-                            <td>$ <?php echo $value["product_price"]; ?></td>
+                            <td><?php echo $value["product_price"]; ?></td>
                             <td>
                                 <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?> TK</td>
                             <td><a href="userprofile.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span
@@ -387,7 +387,7 @@ if (isset($_GET["action"])){
                         ?>
                         <tr>
                             <td colspan="3" align="right">Total</td>
-                            <th align="right">$ <?php echo number_format($total, 2); ?> TK</th>
+                            <th align="right"><?php echo number_format($total, 2); ?> TK</th>
                             <td></td>
                         </tr>
 
