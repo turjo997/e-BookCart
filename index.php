@@ -63,7 +63,7 @@
         <h1 class="font-weight-bolder text-danger mb-5 ">Want to visit the website ? Click the user panel</h1>
 
       
-          <a class = "btn btn-lg btn-danger mr-3" href="admin/login.php"></i>Admin Pamel</a>
+          <a class = "btn btn-lg btn-danger mr-3" href="admin/login.php"></i>Admin Panel</a>
           
           <a class = "btn btn-lg btn-danger mr-3" href="user/main.php"></i>User Panel</a>
 
