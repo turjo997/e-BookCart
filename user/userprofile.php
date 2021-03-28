@@ -11,7 +11,7 @@ if (isset($_POST["add"])){
             $count = count($_SESSION["cart"]);
             $item_array = array(
                 'product_id' => $_GET["id"],
-             
+                 'item_category' => $_POST["hidden_category"],
                 'item_name' => $_POST["hidden_name"],
                 'product_price' => $_POST["hidden_price"],
                 'item_quantity' => $_POST["quantity"],
@@ -25,7 +25,7 @@ if (isset($_POST["add"])){
     }else{
         $item_array = array(
             'product_id' => $_GET["id"],
-            
+            'item_category' => $_POST["hidden_category"],
             'item_name' => $_POST["hidden_name"],
             'product_price' => $_POST["hidden_price"],
             'item_quantity' => $_POST["quantity"],
@@ -114,7 +114,7 @@ if (isset($_GET["action"])){
                                 <h5 class="text-success"><?php echo 'Book Name : ' . $row["book_name"]; ?></h5>
                                 <h5 class="text-success"><?php echo 'Book Price : ' . $row["price"]; ?></h5>
                                 <input type="text" name="quantity" class="form-control" value="1">
-                                
+                                <input type="hidden" name="hidden_category" value="<?php echo $row["category"]; ?>">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["book_name"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                 <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
@@ -145,6 +145,7 @@ if (isset($_GET["action"])){
             <tr>
               
                 <th width="30%">Product Name</th>
+                 <th width="30%">Product Category</th>
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
                 <th width="10%">Total Price</th>
@@ -160,6 +161,7 @@ if (isset($_GET["action"])){
                         <tr>
                             
                             <td><?php echo $value["item_name"]; ?></td>
+                            <td><?php echo $value["item_category"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td><?php echo $value["product_price"]; ?></td>
                             <td>
@@ -217,6 +219,7 @@ if (isset($_GET["action"])){
                                 <h5 class="text-success"><?php echo 'Book Name : ' . $row["book_name"]; ?></h5>
                                 <h5 class="text-success"><?php echo 'Book Price : ' . $row["price"]; ?></h5>
                                 <input type="text" name="quantity" class="form-control" value="1">
+                                <input type="hidden" name="hidden_category" value="<?php echo $row["category"]; ?>">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["book_name"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                 <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
@@ -244,6 +247,7 @@ if (isset($_GET["action"])){
             <table class="table table-bordered">
             <tr>
                 <th width="30%">Product Name</th>
+                 <th width="30%">Product Category</th>
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
                 <th width="10%">Total Price</th>
@@ -258,6 +262,7 @@ if (isset($_GET["action"])){
                         ?>
                         <tr>
                             <td><?php echo $value["item_name"]; ?></td>
+                            <td><?php echo $value["item_category"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td><?php echo $value["product_price"]; ?></td>
                             <td>
@@ -314,6 +319,7 @@ if (isset($_GET["action"])){
                                 <h5 class="text-success"><?php echo 'Book Name : ' . $row["book_name"]; ?></h5>
                                 <h5 class="text-success"><?php echo 'Book Price : ' . $row["price"]; ?></h5>
                                 <input type="text" name="quantity" class="form-control" value="1">
+                                <input type="hidden" name="hidden_category" value="<?php echo $row["category"]; ?>">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["book_name"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                 <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
@@ -343,6 +349,7 @@ if (isset($_GET["action"])){
             <table class="table table-bordered">
             <tr>
                 <th width="30%">Product Name</th>
+                 <th width="30%">Product Category</th>
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
                 <th width="10%">Total Price</th>
@@ -359,6 +366,7 @@ if (isset($_GET["action"])){
                         ?>
                         <tr>
                             <td><?php echo $value["item_name"]; ?></td>
+                            <td><?php echo $value["item_category"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td><?php echo $value["product_price"]; ?></td>
                             <td>
