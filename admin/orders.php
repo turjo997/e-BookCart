@@ -5,6 +5,7 @@
 
    $resu = "" ;
    $users = "";
+   $out = "";
 
    if(isset($_POST['se'])){
     $username = check_input($_POST['username']);
@@ -12,13 +13,29 @@
     $result = mysqli_query($link , $sql);
     
     if(mysqli_num_rows($result)>0){
+     
+     $row1 = mysqli_fetch_array($result) ;
+     
+        $out = '<table class="table table-striped table-bordered table-hover table-success text-center">
+           <thead>
+            <tr><th>Username</th></tr>
+          </thead>
+        
+        <tbody>
+        <tr>
+         <td>'.$row1['user_name'].'</td>
+         
+        </tr>
+        </tbody>
+     </table>';
+    
+
 
       $resu .= '
-   
       <table class="table table-striped table-bordered table-hover table-success text-center">
       <thead>
        <tr>
-       <th>Username</th>
+       
        <th>Book Name</th>
        <th>Category</th>
        <th>Book Quantity</th>                         
@@ -28,7 +45,7 @@
       while($row = mysqli_fetch_array($result)){
           $resu .= '<tbody>
           <tr>
-          <td>'.$row['user_name'].'</td>
+          
           <td>'.$row['book_name'].'</td>
           <td>'.$row['category'].'</td>
           <td>'.$row['book_quantity'].' </td>
@@ -112,6 +129,7 @@
 
    <br><br>
 
+   <?php echo $out; ?>
    <?php echo $resu; ?>
 
 
