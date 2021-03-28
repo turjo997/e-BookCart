@@ -1,6 +1,6 @@
 <?php
   require_once '../config.php';
-  $query ="SELECT category , count(*) as number  from books group by category";
+  $query ="SELECT category , count(*) as number  from orders1 group by category";
   $result = mysqli_query($link, $query); 
 ?>
 
