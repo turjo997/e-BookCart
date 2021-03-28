@@ -33,6 +33,7 @@ require_once '../config.php';
             <table class="table table-bordered">
             <tr>
                 <th width="30%">Product Name</th>
+                <th width="10%">Product Category</th>    
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
                 <th width="10%">Total Price</th>
@@ -48,16 +49,18 @@ require_once '../config.php';
                         ?>
                         <tr>
                             <td><?php echo $value["item_name"]; ?></td>
+                            <td><?php echo $value["item_category"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td><?php echo $value["product_price"]; ?></td>
                                 
                                  <?php
                             $book_name = $value["item_name"];
+                            $category = $value["item_category"];
                             $book_quantiy = $value["item_quantity"];
                             $user_name = $_SESSION['user_name'];
 
                             if(isset($_POST['submit'])){
-                                $sql = "INSERT INTO orders(book_name , book_quantity , user_name)   values('$book_name', '$book_quantiy' , '$user_name')";
+                                 $sql = "INSERT INTO orders1(book_name ,category , book_quantity , user_name)   values('$book_name', '$category','$book_quantiy' , '$user_name')";
                               //  $result = mysqli_query($link , $sql);
 
                                     if (!$link) {
