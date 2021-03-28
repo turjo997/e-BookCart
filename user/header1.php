@@ -73,7 +73,7 @@
 
             
                   //  if(!isset($_SESSION['loggedin'])){
-                      echo '<a class="nav-link" href="orders.php"><b>Bag<i class="fas fa-shopping-cart"></i><span class="badge badge-warning" style="border-radius:50%; height:30px;">0</span></a></b>
+                      echo '<a class="nav-link" href="orders.php"><b>Bag<i class="fas fa-shopping-cart"></i><span class="badge badge-warning" style="border-radius:50%; height:30px;"></span></a></b>
                       
                       
                       <li class="nav-item dropdown">
