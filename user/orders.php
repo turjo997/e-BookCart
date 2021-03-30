@@ -69,7 +69,17 @@ require_once '../config.php';
                     
                                     if (mysqli_query($link, $sql)) {
                                                 
-                                    echo '<script>alert("Successfully ordered the products")</script>';             
+                                    echo '<script>alert("Successfully ordered the products")</script>';    
+                                       ?>
+                                    <script type='text/javascript'>
+                                    window.onload = function(){
+                                    document.getElementById("submitbtn").style.display = "none";
+                                    }
+                                      
+                                    </script>
+                                  <?php           
+        
+                                            
                                     } else {
                                         echo '<script>alert("Failed to ordered the products")</script>';                
                                     }
