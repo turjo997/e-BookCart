@@ -141,9 +141,9 @@
 
                 <div class="row">
 
-                <div class="col-lg-2"></div>
+                <div class="col-lg-2 col-sm-2 sol-md-2"></div>
 
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-sm-8 sol-md-8">
                 <form method = "post" action="" class="w-50 m-auto " enctype="multipart/form-data">
 
                   <div class="from-group">
