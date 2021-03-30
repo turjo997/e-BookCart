@@ -43,7 +43,7 @@ if(isset($_POST['add'])){
           <a class="dropdown-item" href="#">Novels</a>
           <a class="dropdown-item" href="#actions">Actions & Adventures</a>
           <a class="dropdown-item" href="#comics">Comics</a>
-          <a class="dropdown-item" href="#">Detactive</a>
+          <a class="dropdown-item" href="#detactive">Detactive</a>
         </div>
       </li>
     </ul>
@@ -225,6 +225,54 @@ if(isset($_POST['add'])){
 
 </div>  
 
+<div id = "detactive"class="row">
+           
+           <div class="col-lg-3">
+ 
+ 
+           </div>
+ 
+           <div class="col-lg-9">
+                 <br><br>
+                 <div class="tag">Detactive</div>
+                 <div class="row">
+        <?php
+            $query = "select * from books where category = 'Detactive' order by book_id ASC"; 
+            $result = mysqli_query($link,$query);
+            if(mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_array($result)) {
+
+                    ?>
+                    <div class="col-md-3">
+
+                        <form method="post" action="">
+
+                            <div class="product">
+                                <img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width: 100px; height:100px">
+                                <h5 class="text-success"><?php echo 'Book id : ' . $row["book_id"]; ?></h5>
+                                <h5 class="text-success"><?php echo 'Book Name : ' . $row["book_name"]; ?></h5>
+                                <h5 class="text-success"><?php echo 'Book Price : ' . $row["price"]; ?></h5>
+                                <!--<input type="text" name="quantity" class="form-control" value="1">-->
+                                <input type="hidden" name="hidden_name" value="<?php echo $row["book_name"]; ?>">
+                                <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
+                                <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
+                                       value="Add to Cart">
+                            </div>
+                        </form>
+                    </div>
+                    <?php
+                }
+            }
+        ?>
+
+
+
+</div>
+ 
+ </div>
+
+</div>
 
 
 
