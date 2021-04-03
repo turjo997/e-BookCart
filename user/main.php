@@ -224,7 +224,7 @@ if(isset($_POST['add'])){
  </div>
 
 </div>  
-
+<br><br>
 <div id = "detactive"class="row">
            
            <div class="col-lg-3">
