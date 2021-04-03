@@ -172,15 +172,27 @@
 
                     </div>
 
-
-                    <div class="from-group">
+			  
+	            <div class="from-group">
 
                     <label for="category">Category</label>
-                    <input type="text" class="form-control" name="category">
+                    <br>
+                    <select name="category">
+                    
+                     <option value="Category">Select Category</option>
+                     <option value="Novel">Novel</option>
+                     <option value="Action">Action</option>
+                     <option value="Comics">Comics</option>
+                     <option value="Detactive">Detactive</option>
+                    
+                    </select>
+                   <!-- <input type="text" class="form-control" name="category">-->
                     <span class="text-danger"> <?php echo $category_error;?></span>
 
 
                     </div>
+                    <br>		  
+			  
 
                     <div class="from-group">
 
